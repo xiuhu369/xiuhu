@@ -1,1 +1,227 @@
 # xiuhu
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>观止影视工作室 - 影视短剧/动画特效制作</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+        /* 导航栏 */
+        .header {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            z-index: 999;
+            border-bottom: 1px solid #222;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #c4a35a;
+        }
+        /* 首页Banner */
+        .banner {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url("https://picsum.photos/id/1039/1920/1080");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .banner p {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #c4a35a;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #d4b36a;
+        }
+        /* 通用板块 */
+        .section {
+            padding: 80px 5%;
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #fff;
+            border-left: 4px solid #c4a35a;
+            padding-left: 15px;
+        }
+        /* 作品展示 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .work-card {
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        .work-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .work-info {
+            padding: 15px;
+        }
+        .work-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .work-desc {
+            font-size: 14px;
+            color: #999;
+        }
+        /* 联系我们 */
+        .contact {
+            background: #000;
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .contact p {
+            color: #aaa;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏（已加LOGO） -->
+    <div class="header">
+        <div class="logo-wrap">
+            <!-- 把你的LOGO图片和HTML文件放在同一个文件夹里，命名为 1.png 即可显示 -->
+            < img src="1.png" alt="观止影视" class="1-img">
+            <span class="1-text">观止影视工作室</span>
+
+        </div>
+        <div class="nav">
+            <a href=" ">首页</a >
+            <a href="#about">关于我们</a >
+            <a href="#works">作品展示</a >
+            <a href="#contact">联系我们</a >
+        </div>
+    </div>
+
+    <!-- 首页Banner -->
+    <div class="banner" id="home">
+        <h1>以光影为笔，创视听观止</h1>
+        <p>专注悬疑短剧、2D动画特效、影视全流程制作</p >
+        <a href="#works" class="btn">查看作品</a >
+    </div>
+
+    <!-- 关于我们 -->
+    <div class="section" id="about">
+        <h2>关于我们</h2>
+        <p style="color:#aaa; font-size:16px; line-height:1.8;">
+            观止影视工作室，深耕影视短剧与2D动画特效领域，秉持匠心创作理念，打造兼具创意与质感的视听作品，为客户提供一站式影视内容制作解决方案。
+        </p >
+    </div>
+
+    <!-- 作品展示 -->
+    <div class="section" id="works">
+        <h2>代表作品</h2>
+        <div class="works-grid">
+            <!-- 作品1 -->
+            <div class="work-card">
+                < img src="https://picsum.photos/id/237/600/400" alt="悬疑短剧">
+                <div class="work-info">
+                    <div class="work-title">悬疑短剧系列</div>
+                    <div class="work-desc">暗黑惊悚题材，多平台上线作品</div>
+                </div>
+            </div>
+            <!-- 作品2 -->
+            <div class="work-card">
+                < img src="1.png" alt="2D特效动画">
+                <div class="work-info">
+                    <div class="work-title">2D特效动画</div>
+                    <div class="work-desc">陨石坠落/爆炸/恐怖氛围特效制作</div>
+                </div>
+            </div>
+            <!-- 作品3 -->
+            <div class="work-card">
+                < img src="https://picsum.photos/id/1015/600/400" alt="原创剧情片">
+                <div class="work-info">
+                    <div class="work-title">原创剧情短片</div>
+                    <div class="work-desc">现实主义题材，获奖短片作品</div>
+                </div>
+            </div>
+            <!-- 作品4 -->
+            <div class="work-card">
+                < img src="https://picsum.photos/id/1016/600/400" alt="品牌宣传片">
+                <div class="work-info">
+                    <div class="work-title">品牌宣传片</div>
+                    <div class="work-desc">企业/品牌视觉包装与创意视频</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系我们 -->
+    <div class="contact" id="contact">
+        <h2>商务合作</h2>
+        <p>微信：-0j7z0s7  wxid_nl35mehlbryd22</p>
+        <p>联系电话：15275463782  15665840087</p >
+        <p>工作室地址：山东省东营市广饶县小营村</p >
+        <p>邮箱：3696838041@qq.com</p >
+    </div>
+</body>
+</html>
